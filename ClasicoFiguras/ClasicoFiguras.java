@@ -31,11 +31,11 @@ class figurasClasico{
     do{
         //el cuerpo del programa
         System.out.println("Elija la opcion deseada: ");
-        System.out.println("1.- Calcular el area de un cuadrado y perimetro ");
-        System.out.println("2.- Calcular el area de un triangulo equilatero y perimetro");
-        System.out.println("3.- Calcular el area de un circulo y perimetro ");
-        System.out.println("4.- Calcular el area de un rectangulo y perimetro");
-        System.out.println("5.- Calcular el area de un pentagono regular y perimetro ");
+        System.out.println("1.- Calcular el area y el perimetro de un cuadrado y perimetro ");
+        System.out.println("2.- Calcular el area y el perimetro de un triangulo equilatero y perimetro");
+        System.out.println("3.- Calcular el area y el perimetro de un circulo y perimetro ");
+        System.out.println("4.- Calcular el area y el perimetro de un rectangulo y perimetro");
+        System.out.println("5.- Calcular el area y el perimetro de un pentagono regular y perimetro ");
         System.out.println("6.- ayos ");
 
         //asignar la opcion
