@@ -18,6 +18,7 @@ class estructura4{
       
       do{
         //el cuerpo del programa
+             System.out.println("3IV8_Yaniz_Sanchez_DiegoNathan");
              System.out.println("Elija la opcion deseada: ");
              System.out.println("1.- Compra de abono ");
              System.out.println("2.- Convertir decimal a Binario.");
@@ -27,11 +28,12 @@ class estructura4{
              System.out.println("6.- areas y volumenes ");
              System.out.println("7.- Tabla de valores)");
              System.out.println("8.- Factorial de numero positivo");
+             System.out.println("9.- Terminar el programa Owo");
              
                 opcion = entrada.nextInt();
                 switch (opcion) {
                  case 1:
-                    
+                    do{
                     System.out.println("Ingrese su edad");
                     edad = entrada.nextInt();
                                 
@@ -52,36 +54,43 @@ class estructura4{
                             descuento = abono * 55;
                             System.out.println("Lo que debera pagar sera:"+descuento);
                             
+                            
 
                          }
-                         else{ System.out.println("tiene un descuento del 25%, el abono cuesta $100, pero para usted cuesta $75");}
+                         else{ System.out.println("tiene un descuento del 25%, el abono cuesta $100, pero para usted cuesta $75");
                             System.out.println("¿cuanto quiere comprar?:");
                             abono = entrada.nextInt();
 
                              descuento = abono * 75;
                             System.out.println("Lo que debera pagar sera:"+descuento);
+                        }
+                            
 
                     }
-                    if(edad>=22){System.out.println("Para usted mi amigo el abono esta en $100");
+                    else{if(edad<=64){System.out.println("Para usted mi amigo el abono esta en $100");
                     System.out.println("¿cuanto quiere comprar?:");
                     abono = entrada.nextInt();
 
                     descuento = abono*100;
                     System.out.println("Lo que debera pagar sera:"+descuento);}
-                    if(edad>65){
+                    else{
                         System.out.println("tiene un descuento del 40% el abono cuesta $100, pero para usted cuesta $60");
                         System.out.println("¿cuanto quiere comprar?:");
                         abono = entrada.nextInt();
 
                         descuento = abono*60;
                         System.out.println("Lo que debera pagar sera:"+descuento);
-                 }
+                 }}
 
                     
-                 break;
+                 System.out.println("¿deseas repetir este programa?, si lo desea escriba s");
+                
+                   letra = entrada.next().charAt(0);
+                  }while(letra == 's');
+                  break; 
                       
                  case 2: 
-                    
+                    do{
                         do{ 
                          System.out.print("Introduce un numero entero >= 0: ");                                                
                          numero = entrada.nextInt();
@@ -98,9 +107,13 @@ class estructura4{
                      }
 
                      System.out.printf("Binario: %.0f %n", binario);
-                 break;
-
+                     System.out.println("¿deseas repetir este programa?, si lo desea escriba s");
+                
+                     letra = entrada.next().charAt(0);
+                    }while(letra == 's'); 
+                     break;
                  case 3:
+                 do{
                  System.out.println("Elija la opcion deseada: ");
                  System.out.println("1.- De FAHRENHEIT a Celsius ");
                  System.out.println("2.- De Fahrenheit a Kelvine.");
@@ -132,7 +145,13 @@ class estructura4{
                      System.out.println("los grados Rankine son:"+resultado);
                      break;
                   }
+                  System.out.println("¿deseas repetir este programa?, si lo desea escriba s");
+                
+                   letra = entrada.next().charAt(0);
+                  }while(letra == 's'); 
+                  break;
                  case 4:
+                 do{
                   do{
                      System.out.println("Introduzca un numero negativo o positivo, para parar escriba 0");
                      numero = entrada.nextInt();
@@ -145,8 +164,15 @@ class estructura4{
                   }while(numero!=0 );
                   System.out.println("la cantidad de numeros negativos son: "+negativo);
                   System.out.println("la cantidad de numeros positivos son: "+positivo);
-                 break;
+                  positivo = 0;
+                  negativo = 0;
+                  System.out.println("¿deseas repetir este programa?, si lo desea escriba s");
+                
+                   letra = entrada.next().charAt(0);
+                  }while(letra == 's');
+                  break;
                  case 5:
+                 do{
                   System.out.println("espero que haya encontrado lo necesario");
                   System.out.println("Cuantos shampoos compro? $20 cada shampoo");
                   shampo = entrada.nextInt();
@@ -163,12 +189,18 @@ class estructura4{
                   System.out.println(shampo+" shampoo: $"+(shampo*20) );
                   System.out.println(mole+" mole: $"+(mole*10) );
                   System.out.println(tacos+" tacos: $"+(tacos*15) );
-                  System.out.println(condones+" condones: $"+(condones*15) );
+                  System.out.println(condones+" condones: $"+(condones*60) );
                   producto= condones+shampo+tacos+mole;
                   System.out.println(producto+" productos comprados");
                   System.out.println("Precio Total: $"+total );
-                  break;
+                  System.out.println("¿deseas repetir este programa?, si lo desea escriba s");
+                  
+                   letra = entrada.next().charAt(0);
+                       
+                   }while(letra == 's'); 
+                   break;
                   case 6:
+                  do{
                   System.out.println("Elija la opcion deseada: ");
                   System.out.println("1.- Area y perimetro de un rectangulo");
                   System.out.println("2.- Area y perimetro de un triangulo");
@@ -217,8 +249,13 @@ class estructura4{
                       System.out.println("El volumen de cilindro es de: "+resultado);
                         break;
                      }
+                   System.out.println("¿deseas repetir este programa?, si lo desea escriba s");
+                
+                   letra = entrada.next().charAt(0);
+                  }while(letra == 's'); 
                   break;
                   case 7:
+                 do{
                   System.out.println("\tN\t\t\t");
                   System.out.println("\t1\t10\t100\t1000");
                   System.out.println("\t2\t20\t200\t2000");
@@ -230,8 +267,14 @@ class estructura4{
                   System.out.println("\t8\t80\t800\t8000");
                   System.out.println("\t9\t90\t900\t9000");
                   System.out.println("\t10\t100\t1000\t1000");
-                  break;
+                  System.out.println("¿deseas repetir este programa?, si lo desea escriba s");
+                
+                letra = entrada.next().charAt(0);
+        
+                }while(letra == 's'); 
+               break;
                   case 8:
+                  do{
                   System.out.println("Escriba el numero del cual quiere sacar la factorial");
                   numero = entrada.nextInt();
                   if(numero!=1){
@@ -239,26 +282,21 @@ class estructura4{
                      do{
                      abajo= abajo*arriba;
                      System.out.println("La factorial es: "+abajo);
-                     abajo= abajo+1;
+                     
                      System.out.println(abajo);
                      
                      arriba= arriba + 1;
                      System.out.println(arriba);
                      
                      
-                  }while(numero != arriba);
+                  }while(numero+1 != arriba);
                   System.out.println("La factorial es: "+abajo);
                 } else{System.out.println("La factorial es: 2");}
-                  break;
+                  ;
                 }
                   else {System.out.println("La factorial es: 1");}
                   
-                  default:
-                 
-                 System.out.println("AHUEVOSISALIO");
-                 
-                }
-                System.out.println("¿Deseas repetir el programa?, si lo desea escriba s");
+                  System.out.println("¿deseas repetir este programa?, si lo desea escriba s");
                 //recibir una respuesta de si o no
                 //booleano o un char s
                 letra = entrada.next().charAt(0);
@@ -267,7 +305,24 @@ class estructura4{
                 //si usamos string   se usa ""
                 //char num = 1       1 + 1 = 11
         
-            }while(letra == 's');
+                }while(letra == 's'); 
+                break;
+                  
+                  default:
+                 
+                 
+                 
+                }
+                System.out.println("¿deseas volver al menu uwu?, si lo desea escriba s");
+                //recibir una respuesta de si o no
+                //booleano o un char s
+                letra = entrada.next().charAt(0);
+        
+                //si utilizamos char se usa '' 
+                //si usamos string   se usa ""
+                //char num = 1       1 + 1 = 11
+        
+            }while(letra == 's'); 
         }
      }
   
