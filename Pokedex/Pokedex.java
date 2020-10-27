@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-class estructura4{
+class pokedex{
 
     public static void main(String[] args){
       Scanner entrada = new Scanner(System.in);
