@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Menu{
 
@@ -7,17 +8,16 @@ public class Menu{
     //Creación del método «menu».
     public void menu(){
 
-        char opcion, letra;
+        char opcion,letra;
+        
+        
+        String cadena;
 
-        System.out.println("Yaniz Sanchez Diego Nathan. 3IV8");
-
+        
         do{
-        System.out.println("Seleccione el programa que desea ejecutar.");
-        System.out.println("A. Calculadora de edad.");
-        System.out.println("B. area y perimemetro.");
-        System.out.println("C. Costos Llamadas.");
-
-        opcion = entrada.next().charAt(0);
+            
+       
+        opcion = JOptionPane.showInputDialog("Yaniz Sanchez Diego Nathan. 3IV8\nSeleccione el programa que desea ejecutar\nA.- Calculadora de edad.\nB.-Area y perimetro\nC.--Costos llamadas").charAt(0);
 
         
         switch(opcion){
@@ -28,8 +28,7 @@ public class Menu{
                     obj.Edad();
                 
                
-                System.out.println("Deseas repetir el programa? dale s si es asi.");
-                letra = entrada.next().charAt(0);
+                    letra = JOptionPane.showInputDialog("Deseas Repetir el programa?\ndale s si es asi:").charAt(0);
                 }while(letra == 's');
             break;
 
@@ -38,8 +37,7 @@ public class Menu{
                 do{
                     Figuras obj = new Figuras();
                     obj.Figuras();
-                    System.out.println("Deseas repetir el programa? dale s si es asi.");
-                    letra = entrada.next().charAt(0);
+                    letra = JOptionPane.showInputDialog("Deseas Repetir el programa?\ndale s si es asi:").charAt(0);
                 }while(letra == 's');
             break;  
 
@@ -48,15 +46,13 @@ public class Menu{
             do{
                 Llamadas obj = new Llamadas();
                 obj.Llamadas();
-                System.out.println("Deseas repetir el programa? dale s si es asi.");
-                letra = entrada.next().charAt(0);
+                letra = JOptionPane.showInputDialog("Deseas Repetir el programa?\ndale s si es asi:").charAt(0);
             }while(letra == 's');
             break;
         }
 
         //Se brinda la opción para volver al menú o cerrar el programa.
-        System.out.println("Deseas volver al menu? dale s si es asi.");
-                letra = entrada.next().charAt(0);
+        letra = JOptionPane.showInputDialog("Deseas Volver al menu?\ndale s si es asi:").charAt(0);
             }while(letra == 's');
     }
 

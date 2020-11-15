@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 public class Figuras {
     Scanner entrada = new Scanner(System.in);
     double resultado;
@@ -7,15 +9,8 @@ public class Figuras {
     
     public void Figuras(){
        
-
-         System.out.println("que quieres calcular? owo");
-         System.out.println("Elija la opcion deseada: ");
-        System.out.println("1.- Calcular el area y el perimetro de un cuadrado y perimetro ");
-        System.out.println("2.- Calcular el area y el perimetro de un triangulo isoseles y perimetro");
-        System.out.println("3.- Calcular el area y el perimetro de un circulo y perimetro ");
-        System.out.println("4.- Calcular el area y el perimetro de un rectangulo y perimetro");
-        opcion = entrada.nextInt();
-    
+        opcion = Integer.parseInt(JOptionPane.showInputDialog("Que quieres calcular?\n1.-Calcular el area y el perimetro de un cuadrado y perimetro\n2.- Calcular el area y el perimetro de un triangulo isoseles y perimetro\n3.- Calcular el area y el perimetro de un circulo y perimetro\n4.- Calcular el area y el perimetro de un rectangulo y perimetro"));
+             
     switch(opcion){
         case 1:
             Cuadrado();
@@ -36,11 +31,10 @@ public class Figuras {
 
 }
     public void Circulo(){
-        System.out.println("Ingresa el valor del radio");
-        base = entrada.nextInt();
+        base = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el valor del radio"));
         Circal();
-        System.out.println("El area del circulo es de: "+resultado);
-        System.out.println("El perimetro del circulo es de: "+perimetro);  
+        JOptionPane.showMessageDialog(null, "El area del circulo es de: "+resultado+"\nEl perimetro del circulo es de: "+perimetro);
+        
 
 
 
@@ -53,14 +47,11 @@ public class Figuras {
         
     }
     public void Rectangulo(){
-        System.out.println("Ingresa el valor de la base");
-        base = entrada.nextInt();
+        base = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el valor de la base"));
 
-        System.out.println("Ingresa el valor de la altura");
-        altura = entrada.nextInt();
+        altura = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el valor de la altura"));
         Recal();
-        System.out.println("El area del rectangulo es de: "+resultado);
-        System.out.println("El perimetro del rectangulo es de: "+perimetro);
+        JOptionPane.showMessageDialog(null, "El area del rectangulo es de: "+resultado+"\nEl perimetro del rectangulo es de: "+perimetro);
            
 
     }
@@ -70,11 +61,9 @@ public class Figuras {
        
     }
     public void Cuadrado(){
-        System.out.println("Ingresa el valor del lado");
-        base = entrada.nextInt();
+        base = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el valor del lado"));
         Cuadcal();
-        System.out.println("El area del cuadrado es de: "+resultado);
-        System.out.println("El perimetro del cuadrado es de: "+perimetro);
+        JOptionPane.showMessageDialog(null, "El area del cuadrado es de: "+resultado+"\nEl perimetro del cuadrado es de: "+perimetro);
 
     }
     public void Cuadcal(){
@@ -84,14 +73,11 @@ public class Figuras {
 
     }
     public void Triangulo(){
-        System.out.println("Ingresa el valor de la base");
-        base = entrada.nextInt();
+        base = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el valor de la base"));
 
-        System.out.println("Ingresa el valor de la altura");
-        altura = entrada.nextInt();
+        altura = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el valor de la altura"));
         Triancal();
-        System.out.println("El area del triangulo es de: "+resultado);
-        System.out.println("El perimetro del triangulo es de: "+perimetro);
+        JOptionPane.showMessageDialog(null, "El area del triangulo es de: "+resultado+"\nEl perimetro del triangulo es de: "+perimetro);
     }
     public void Triancal(){
         resultado = (base*altura)/2;

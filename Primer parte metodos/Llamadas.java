@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 
+import javax.swing.JOptionPane;
+
+
 public class Llamadas {
     char letra;
     int numero =0;
@@ -17,24 +20,20 @@ public class Llamadas {
     Scanner entrada = new Scanner(System.in);
     public void Llamadas(){
     
-
-   System.out.println("Porfavor digite su numero telefonico de 8 digitos");
-   numero = entrada.nextInt();
+        numero = Integer.parseInt(JOptionPane.showInputDialog("Porfavor digite su numero telefonico de 8 digitos"));
    
-   if(9999999<=numero && numero>=99999999){
+     
+   if(9999999>=numero || numero>=99999999){
    do{
-    System.out.println("pls escriba un numero de 8 digitos");
-    numero = entrada.nextInt();
-   }while(9999999<=numero && numero>=99999999);
+    numero = Integer.parseInt(JOptionPane.showInputDialog("Porfavor escriba un numero de 8 digitos"));
+   }while(9999999>=numero || numero>=99999999);
 }
           
 do{
-   System.out.println("su numero es "+numero);
-   System.out.println("Que desea hacer?");
-   System.out.println("1.-Realizar llamadas"); 
-   System.out.println("2.-Checar credito");
-   opcion = entrada.nextInt();
-   
+    JOptionPane.showMessageDialog(null, "Su numero es "+numero);
+    opcion = Integer.parseInt(JOptionPane.showInputDialog("Que desea hacer?\n1.- Realizar llamadas\n2.-Checar credito"));
+  
+      
    switch(opcion){
         case 1:
             llamnum();
@@ -45,23 +44,21 @@ do{
 
 
    }
-   System.out.println("Deseas seguir ocupando este numero? dale s si es asi.");
-   letra = entrada.next().charAt(0);
+   letra = JOptionPane.showInputDialog("Deseas seguir ocupando este numero?\ndale s si es asi:").charAt(0);
+ 
 }while(letra == 's');
 
     }
     public void llamnum(){
+        llamadasnac = Double.parseDouble(JOptionPane.showInputDialog("Cuantas llamadas locales nacionales\nquiere hacer?"));
+        llamadasint = Double.parseDouble(JOptionPane.showInputDialog("Cuantas llamadas locales internacionales\nquiere hacer? "));
+        celulares = Double.parseDouble(JOptionPane.showInputDialog("Cuantas llamadas a celulares quiere hacer?"));
         System.out.println("Cuantas llamadas Locales nacionales quiere hacer?");
-        llamadasnac = entrada.nextDouble();
-        System.out.println("Cuantas llamadas Locales internacionales quiere hacer?");
-        llamadasint = entrada.nextDouble();
-        System.out.println("Cuantas llamadas a celulares quiere hacer?");
-        celulares = entrada.nextDouble();
+        
         sumllam();
-        System.out.println("De "+llamadasnac+" llamadas nacionales debera pagar "+llamadasnacs);
-        System.out.println("De "+llamadasint+" llamadas internacionales debera pagar "+llamadasints);
-        System.out.println("De "+celulares+" llamadas a celulares debera pagar "+celularess);
-        System.out.println("Su monto a pagar por "+total+" llamadas en total es de "+totals);
+    JOptionPane.showMessageDialog(null, "De "+llamadasnac+" llamadas nacionales debera pagar "+llamadasnacs+"\nDe "+celulares+" llamadas a celulares debera pagar "+celularess+"\nDe "+llamadasint+" llamadas internacionales debera pagar "+llamadasints+"\nSu monto a pagar por "+total+" llamadas en total es de "+totals);
+       
+      
     
     
     }
@@ -75,7 +72,8 @@ do{
 
     }
     public void credito(){
-        System.out.println("su credito es de "+credito);
+        JOptionPane.showMessageDialog(null, "su credito es de "+credito);
+        
     }
 
 }
