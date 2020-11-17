@@ -41,7 +41,7 @@ public class Animal {
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
-    public String getrRaza(){
+    public String getRaza(){
         return raza;
     }
     //envia u establece 
