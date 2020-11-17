@@ -1,4 +1,4 @@
-public class Perro {
+public class Perro extends Animal {
     //para caracterizar a un perro es su ladrido
    
    
