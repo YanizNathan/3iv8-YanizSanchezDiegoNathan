@@ -16,7 +16,7 @@ public class Animal {
 
     }
 
-    public Animal(String nombre, String raza, String tipo_alimento){
+    public Animal(String nombre, String raza, String tipo_alimento, int edad){
         //este es el metodo y lo sabemos gracias a que tiene parametros
         /*
         para poder acceder a las variables porque son privadas es necesario

@@ -19,11 +19,12 @@ public class Gato extends Animal {
 
     }
 
-    public void mostrarPerro(){
+    public void mostrarGato(){
         System.out.println("El nombre del perro es: "+getNombre()
                             + "su raza es: "+ getRaza()
                             + "come: "+ getTipoAlimento()
                             + "su edad es de: "+getEdad()
                             + "su ladrido es" + getNumvidas());
 
+    }
 }
