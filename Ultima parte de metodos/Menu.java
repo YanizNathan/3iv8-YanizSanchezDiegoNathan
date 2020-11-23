@@ -18,7 +18,7 @@ public class Menu{
         do{
             
        
-        opcion = JOptionPane.showInputDialog("Yaniz Sanchez Diego Nathan. 3IV8\nSeleccione el programa que desea ejecutar\nA.- Sueldo.\nB.-Area y perimetro\nC.--Costos llamadas").charAt(0);
+        opcion = JOptionPane.showInputDialog("Yaniz Sanchez Diego Nathan. 3IV8\nSeleccione el programa que desea ejecutar\nA.- Sueldo.\nB.-Proovedores\nC.--Costos llamadas").charAt(0);
 
         
         switch(opcion){
@@ -36,8 +36,8 @@ public class Menu{
             case 'B':
                 
                 do{
-                   // Empleados obj = new Empleados();
-                   // obj.Empleados();
+                    Proovedores obj = new Proovedores();
+                    obj.Proovedores();
                     letra = JOptionPane.showInputDialog("Deseas Repetir el programa?\ndale s si es asi:").charAt(0);
                 }while(letra == 's');
             break;  
