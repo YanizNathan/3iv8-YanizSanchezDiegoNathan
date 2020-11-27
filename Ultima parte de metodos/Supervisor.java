@@ -57,8 +57,8 @@ public class Supervisor extends Empleados{
         this.sueldo = sueldo;
     }
     public double getId(){
-        
-        return sueldo;
+        id = 484848;
+        return id;
     }
     //envia u establecer
     public void setId(double id){
@@ -66,7 +66,7 @@ public class Supervisor extends Empleados{
         this.id = id;
     }
     public void mostrarSu(){
-        JOptionPane.showMessageDialog(null, "Su nombre es: "+getNombre()+"\nSu puesto es: "+ getPuesto()+"\nSu id es: "+getId()+"Su pago quincenal es de :"+getQuincena()+"\nlo que paga de infonavit es :"+getInfonavit()+"\nlo que paga de Seguro de gastos medicos es: "+getGastosm()+"\nLo que paga de Isr:"+getIsr()+"\nsu sueldo total es de: "+getSueldo());
+        JOptionPane.showMessageDialog(null, "Su nombre es: "+getNombre()+"\nSu puesto es: "+ getPuesto()+"\nSu id es: "+getId()+"\nSu pago quincenal es de :"+getQuincena()+"\nlo que paga de infonavit es :"+getInfonavit()+"\nlo que paga de Seguro de gastos medicos es: "+getGastosm()+"\nLo que paga de Isr:"+getIsr()+"\nsu sueldo total es de: "+getSueldo());
         
     }
     
